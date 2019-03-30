@@ -1,0 +1,35 @@
+rm read.txt       删除当前文件夹的read.txt文件
+名词解释：
+
+工作区（Working Directory）→就是电脑里能看到的目录，比如learnGit文件夹就是一个工作区
+版本库（Repository）→工作区有一个隐藏目录.git，这个不算是工作区，而是Git的版本库
+暂存区（stage或者index）→版本库里有很多东西，其中最重要的是stage暂存区
+
+
+git init                               把当前文件夹设置为可以用git管理的仓库
+git add read.txt                       把read.txt文件添加到git仓库的暂存区
+git commit -m "添加了read.txt文件"     把文件从暂存区提交到当前分支（master是Git自动帮我们创建的分支），其中-m后面输入的内容是本次提交的说明，方便查询改动记录
+
+
+（注：为什么Git添加文件需要add、commit两步呢？因为commit可以一次提交很多文件，因此可以多次add不同的文件）
+
+
+git log                                查看git提交的历史记录，即commit的记录
+git log --pretty=oneline               清晰地查看git提交的历史记录
+git reflog                             查看git每一次操作的历史记录，包含添加、提交、版本回退等操作记录
+git status                             查看工作区文件的状态，是否新增、删除、修改了某些文件
+
+git reset --hard HEAD^                 把当前版本回退到上一个版本，其中HEAD代表当前版本，HEAD^代表上一个版本
+git reset --hard VersionNumber         把当前版本回退到指定版本号的版本，其中VersionNumber代表版本号，每一次操作之后git都会沿时间线生成一个十六进制的数字版本号，因此可以很方便的回退到指定的版本
+git reset HEAD readme.txt              把暂存区的修改回退到工作区
+
+git diff HEAD -- readme.txt            查看工作区的readme.txt和版本库里有何不同
+git checkout -- readme.txt             把readme.txt工作区的修改全部撤销
+
+git rm readme.txt                      从工作区删除readme.txt文件,删除后commit一下，可从版本库上删除
+
+
+
+
+
+
