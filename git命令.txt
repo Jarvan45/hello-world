@@ -1,10 +1,19 @@
 rm read.txt       删除当前文件夹的read.txt文件
 名词解释：
 
-工作区（Working Directory）→就是电脑里能看到的目录，比如learnGit文件夹就是一个工作区
-版本库（Repository）→工作区有一个隐藏目录.git，这个不算是工作区，而是Git的版本库
-暂存区（stage或者index）→版本库里有很多东西，其中最重要的是stage暂存区
+工作区（Working Directory）→ 就是电脑里能看到的目录，比如learnGit文件夹就是一个工作区
+版本库（Repository）→ 工作区有一个隐藏目录.git，这个不算是工作区，而是Git的版本库
+暂存区（stage或者index）→ 版本库里有很多东西，其中最重要的是stage暂存区
+master → 默认开发分支
+origin → 默认远程版本库
+Head → 默认开发的分支
+Head^ → Head的父提交
 
+git config -- user.name                查看当前git仓库的用户名
+git config -- user.email               查看当前git仓库的email
+git config user.name "远程仓库的用户名"            设置远程仓库的用户名
+git config user.email "邮箱"					   设置远程仓库的邮箱
+git config -- core.quotepath false     解决gitbash中不能显示中文
 
 git init                               把当前文件夹设置为可以用git管理的仓库
 git add read.txt                       把read.txt文件添加到git仓库的暂存区
